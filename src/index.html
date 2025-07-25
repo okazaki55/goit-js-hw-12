@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+<head>
 
-    <load src="./partials/footer.html" />
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Görsel Arama</title>
+  <link rel="stylesheet" href="./css/styles.css" />
 
-    <script type="module" src="./main.js"></script>
-  </body>
+</head>
+
+<body>
+
+  <div class="container">
+    <form id="form">
+      <input type="text" id="search" placeholder="Search images..." />
+      <button type="submit">Search</button>
+    </form>
+
+    <div id="loader-center" class="loader hidden"></div>
+    <div class="gallery" id="gallery"></div>
+
+    <div id="load-more-container" class="hidden">
+      <button id="load-more">Load more</button>
+      <div id="loader-below-button" class="loader hidden"></div>
+    </div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+
+</body>
+
 </html>
